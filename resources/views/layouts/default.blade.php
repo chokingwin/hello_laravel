@@ -6,10 +6,13 @@
 </head>
 <body>
 @include('layouts._header')
-@include('shared._messages')
 <div class="container">
-    @yield('content')
+    <div class="col-md-offset-1 col-md-10">
+        @include('shared._messages')
+        @yield('content')
+        @include('layouts._footer')
+    </div>
 </div>
-@include('layouts._footer')
+<script src="/js/app.js"></script>
 </body>
 </html>
